@@ -1,0 +1,22 @@
+ID,Title,Preconditions,Steps,Expected Result
+TC_BT_001,Verify successful fund transfer within daily limit,"User is logged in with an active account, daily limit is not exceeded","1. Navigate to Fund Transfer
+2. Enter beneficiary details
+3. Enter amount within daily limit
+4. Submit transaction",Transaction completes successfully and confirmation is shown
+TC_BT_002,Fund transfer with insufficient balance,"User is logged in with an active account, balance is below daily limit","1. Navigate to Fund Transfer
+2. Enter beneficiary details
+3. Enter amount exceeding daily limit
+4. Submit transaction",Transaction fails due to insufficient balance and error message is displayed
+TC_BT_003,Verify OTP authentication for fund transfer,"User is logged in with an active account, OTP is sent to registered mobile number","1. Navigate to Fund Transfer
+2. Enter beneficiary details
+3. Enter amount within daily limit
+4. Enter OTP received
+5. Submit transaction",Transaction completes successfully and confirmation is shown
+TC_BT_004,Fund transfer with invalid beneficiary details,User is logged in with an active account,"1. Navigate to Fund Transfer
+2. Enter invalid beneficiary details
+3. Enter amount within daily limit
+4. Submit transaction",Transaction fails due to invalid beneficiary details and error message is displayed
+TC_BT_005,Verify daily limit exceeded for fund transfer,"User is logged in with an active account, daily limit is exceeded","1. Navigate to Fund Transfer
+2. Enter beneficiary details
+3. Enter amount exceeding daily limit
+4. Submit transaction",Transaction fails due to daily limit exceeded and error message is displayed
